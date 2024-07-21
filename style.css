@@ -60,9 +60,6 @@ body{
     align-items: center;
     
 }
-.wrapper{
-    position: relative;
-}
 .container-2 .pfp{
     width: 2.7rem;
     border-radius: 50%;
@@ -84,6 +81,7 @@ body{
     width: 2.3rem;
     height: 2.3rem;
     background-color: var(--Light-Grayish-Blue);
+    position: relative;
     
 }
 .container-2 button.active img{
@@ -94,8 +92,9 @@ body{
     justify-content: space-between;
     gap: 1.5rem;
     position: absolute;
-    bottom: 115%; 
-    left: 45%;
+    bottom: 140%; 
+    left: 50%;
+    transform: translate(-50%);
     padding: 1.2rem 2rem;
     background-color: var(--Very-Dark-Grayish-Blue);
     display: none;
@@ -149,31 +148,29 @@ body{
         position: relative;
         
     }
-
+    .container-2 button{
+        position: static;
+        z-index: 2;
+    
+    }
     .bubble {
         display: none;
         position: absolute;
-        align-items: center;
-        justify-content: flex-start;
         top: 0;
-        left: 0;
-        right: 0;
         width: 100%;
         height: 100%;
-        bottom: 0;
+        bottom: 0;  
+        align-items: center;
+        justify-content: flex-start;
         padding: 1.2rem 2rem;
         background-color: var(--Very-Dark-Grayish-Blue);
         border-radius: 0 0 0.5rem 0.5rem ;
-        z-index: 1;
+        z-index: -1;
         white-space: nowrap;
         
     }
     
     .bubble::after {
         display: none; 
-    }
-    .container-2 button{
-        
-        z-index: 2;
     }
 }
